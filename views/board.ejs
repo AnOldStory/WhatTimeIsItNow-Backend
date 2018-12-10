@@ -1,0 +1,12 @@
+<html>
+  <head> </head>
+  <body>
+    <%if (posts) {%>
+         <% posts.forEach(list=>{ %>
+            <%=list.title%>
+            <%=list.contents%>
+            <%=list.author%>
+        <% }) %> 
+    <% }%>
+  </body>
+</html>
