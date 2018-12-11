@@ -2,7 +2,7 @@ var Models = require("../models");
 var sequelize = require("sequelize");
 
 exports.getList = (req, res, callback) => {
-  Models.Boards.findAll({offset:(req.body.offset||0)*10,limit:10,order:[['id','DESC']]})
+  Models.Boards.findAll({offset:(req.query.offset||0)*10,limit:10,order:[['id','DESC']]})
     .then(list => {
       console.log(list)
       return callback(null, list);
