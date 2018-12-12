@@ -15,23 +15,24 @@ var config = require("./config/config");
 
 var mainSequelize = require("./models/index");
 
-var mysql = require("mysql");
-var connection = mysql.createConnection({
-  host: config.mysql.host,
-  port: config.mysql.port,
-  user: config.mysql.user,
-  password: config.mysql.password,
-  database: config.mysql.database
-});
+// var mysql = require("mysql");
 
-connection.connect(function(err, connection) {
-  if (err) {
-    if (connection) {
-      connection.release();
-    }
-    console.log(err);
-  }
-});
+// var connection = mysql.createConnection({
+//   host: config.mysql.host,
+//   port: config.mysql.port,
+//   user: config.mysql.user,
+//   password: config.mysql.password,
+//   database: config.mysql.database
+// });
+
+// connection.connect(function(err, connection) {
+//   if (err) {
+//     if (connection) {
+//       connection.release();
+//     }
+//     console.log(err);
+//   }
+// });
 
 var index = require("./routes/index");
 

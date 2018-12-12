@@ -10,7 +10,7 @@ Description
 Installation
 ------------
 
-Node.js + express + mysql + sequlize를 사용하여 제작 되어진 웹 페이지의 서버입니다.
+Node.js + express + postgreSQL + sequlize를 사용하여 제작 되어진 웹 페이지의 서버입니다.
 
 ~~~
 $ npm install

@@ -3,9 +3,9 @@ var fs        = require("fs");
 var path      = require("path");
 var Sequelize = require("sequelize");
 var config    = require("../config/config");
-var sequelize = new Sequelize(config.mysql.database, config.mysql.user, config.mysql.password, {
-    host:config.mysql.host,
-    dialect:"mysql"
+var sequelize = new Sequelize(config.DATABASE.database, config.DATABASE.user, config.DATABASE.password, {
+    host:config.DATABASE.host,
+    dialect:"postgres"
 });
 var db        = {};
 
