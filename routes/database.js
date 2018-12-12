@@ -2,7 +2,7 @@ var Models = require("../models");
 var sequelize = require("sequelize");
 
 exports.getList = (req, res, callback) => {
-  Models.Boards.findAll({offset:(req.query.offset||0)*10,limit:10,order:[['id','DESC']]})
+  Models.Boards.findAll({ offset: (req.query.offset || 0) * 10, limit: 10, order: [['id', 'DESC']] })
     .then(list => {
       console.log(list)
       return callback(null, list);
@@ -14,8 +14,8 @@ exports.getList = (req, res, callback) => {
 
 exports.newPost = (req, res, callback) => {
   Models.Boards.create({
-    contents: req.body.contents||"아무것도 안 적었음",
-    author: req.body.author||"익명"
+    contents: req.body.contents || "아무것도 안 적었음",
+    author: req.body.author || "익명"
   })
     .then(result => {
       if (result) {

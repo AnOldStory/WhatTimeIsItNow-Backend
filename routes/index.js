@@ -21,8 +21,13 @@ router.post("/board", (req, res, next) => {
   db.newPost(req, res, (err, result) => {
     if (err) next(err);
     else{
-      res.setHeader("Content-Type", "application/json");
-      res.json(JSON.stringify(list));
+      db.getList(req,res,(err,list)=>{
+        if (err) next(err);
+        else{
+          res.setHeader("Content-Type", "application/json");
+          res.json(JSON.stringify(list));
+        }
+      })
     }
   });
 });
