@@ -57,14 +57,14 @@ app.use("/", index);
 app.use("/users", users);
 
 mainSequelize.sequelize
-  .sync()
+  .sync({force:true})
   .then(() => {
     console.log("DB OK!");
   })
   .catch(err => {
     console.log("DB err : ", err);
   });
-
+  
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error("Not Found");

@@ -1,12 +1,15 @@
 module.exports = {
-    "DATABASE":{
-      host:"write here",
-      port:"5432",//"3306",
-      user:"write here",
-      password:"write here",
-      database:"Boards"
-    },
+  DATABASE: {
+    host: "220.94.42.246",
+    port: "3306",
+    user: "skydb",
+    password: "dbsky",
+    database: "boards",
+    dialect: "postgres",
+    timezone: "+09:00",
+  },
     "DATABASE_URL": process.env.DATABASE_URL ||"write down",
-    "SESSION_SECRET":"amollang"
+    "SESSION_SECRET":"amollang",
+    "API_PORT": 7001,
   };
   
