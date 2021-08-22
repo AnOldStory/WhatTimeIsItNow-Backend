@@ -1,4 +1,4 @@
-What Time Is It Now - BackEnd V1.0.
+What Time Is It Now - BackEnd
 ===============================
 ![](https://img.shields.io/badge/version-v1.0.0-orange) ![](https://img.shields.io/badge/Framework-Node.js%2C%20Express%2C%20PostgreSQL-brightgreen)
 
